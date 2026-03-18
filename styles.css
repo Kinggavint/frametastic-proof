@@ -774,8 +774,8 @@ a, button, [role="button"], input, textarea, select {
 }
 
 .featured-card-image {
-  height: 240px;
-  min-height: 240px;
+  height: 280px;
+  min-height: 280px;
   position: relative;
   overflow: hidden;
 }
@@ -935,8 +935,8 @@ a, button, [role="button"], input, textarea, select {
 }
 
 .portfolio-card-image {
-  height: 220px;
-  min-height: 220px;
+  height: 280px;
+  min-height: 280px;
   position: relative;
   overflow: hidden;
 }
@@ -1536,6 +1536,28 @@ a, button, [role="button"], input, textarea, select {
   border-width: 1px;
   width: 75%;
   height: 75%;
+}
+
+/* ============================
+   PORTFOLIO IMAGES
+   ============================ */
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.featured-card:hover .portfolio-img,
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.05);
+}
+
+.featured-card-image,
+.portfolio-card-image {
+  overflow: hidden;
 }
 
 /* CTA banner */
