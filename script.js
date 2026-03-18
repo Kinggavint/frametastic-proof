@@ -5,6 +5,21 @@
 (function () {
   'use strict';
 
+  // --- Theme Toggle (Light/Dark) ---
+  const savedTheme = localStorage.getItem('frametastic-theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }
+
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('frametastic-theme', next);
+    });
+  });
+
   // --- Sticky Header Shadow ---
   const header = document.querySelector('.site-header');
   if (header) {
